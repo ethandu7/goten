@@ -1,0 +1,58 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+buildscript {
+    repositories {
+        jcenter()
+        mavenCentral()
+//        maven {
+//            url "/Users/wangdan/Documents/github/mvn-repo-aiwen/repository/"
+//        }
+        maven {
+            url "https://raw.githubusercontent.com/wangdan/mvn-repo-aiwen/master/repository/"
+        }
+        maven { url "https://jitpack.io" }
+        maven { url "https://maven.google.com" }
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:2.3.3'
+
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+}
+
+allprojects {
+    repositories {
+        jcenter()
+        mavenCentral()
+        maven {
+            url "http://dl.bintray.com/fir/maven"
+        }
+//        maven {
+//            url "/Users/wangdan/Documents/github/mvn-repo-aiwen/repository/"
+//        }
+        maven {
+            url "https://raw.githubusercontent.com/wangdan/mvn-repo-aiwen/master/repository/"
+        }
+        maven { url "https://jitpack.io" }
+        maven { url "https://maven.google.com" }
+    }
+}
+
+ext {
+    // android build info
+    android = [
+            compileSdkVersion: 25,
+            buildToolsVersion: "25.0.2",
+            minSdkVersion    : 19,
+            targetSdkVersion : 24,
+            applicationId    : "org.aisen.weibo.sina",
+            versionCode      : 618,
+            versionName      : "6.1.8"
+    ]
+
+    // support lib version
+    supportLibVersion = "25.2.0"
+    okhttpLibVersion = "2.6.0"
+    fastjsonLibVersion = "1.2.6"
+}
